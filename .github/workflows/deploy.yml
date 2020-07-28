@@ -1,9 +1,7 @@
 name: deploy to lambda
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ develop ]
 jobs:
   deploy_source:
     name: build and deploy lambda
