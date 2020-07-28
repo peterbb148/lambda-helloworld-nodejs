@@ -1,4 +1,4 @@
-name: deploy to lambda
+name: deploy develop
 on:
   push:
     branches: [ master ]
