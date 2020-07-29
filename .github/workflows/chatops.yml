@@ -11,4 +11,6 @@ jobs:
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           reaction-token: $(( secrets.REPO_ACCESS_TOKEN ))
-          commands: deploy_prd
+          commands: deploy
+          permission: admin
+          issue-type: pull-request 
