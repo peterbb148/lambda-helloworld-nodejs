@@ -9,8 +9,9 @@ jobs:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v1
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          reaction-token: $(( secrets.REPO_ACCESS_TOKEN ))
           commands: deploy
           permission: admin
           issue-type: pull-request 
+          named-args: true
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          reaction-token: $(( secrets.REPO_ACCESS_TOKEN ))
