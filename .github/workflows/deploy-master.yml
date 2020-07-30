@@ -10,11 +10,12 @@ jobs:
         node-version: [12.x]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: npm install and build
         run: |
           npm ci
@@ -33,6 +34,14 @@ jobs:
           aws_region: eu-west-1
           function_name: prd-HelloWorld
           zip_file: bundle.zip
+      - name: Comment on success
+        if: success()
+        uses: peter-evans/create-or-update-comment@v1.4.1
+        with:
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction: hooray
+          body: |
+            Successfully deployed [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}) to [staging](${{ steps.popular-repos-web.outputs.webapp-url }})
   hooray:
     runs-on: ubuntu-latest
     steps:
