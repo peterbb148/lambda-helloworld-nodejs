@@ -5,12 +5,11 @@ on:
 jobs:
   slashCommandDispatch:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '/deploy')
     steps:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v2
         with:
-          commands: production
+          commands: deploy
           permission: admin
           issue-type: pull-request
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
