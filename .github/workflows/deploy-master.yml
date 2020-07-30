@@ -1,7 +1,7 @@
 name: deploy master
 on:
   repository_dispatch:
-    types: [deploy-command]
+    types: [production-command]
 jobs:
   deploy_source:
     name: build and deploy lambda to production
