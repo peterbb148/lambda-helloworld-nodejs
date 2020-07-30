@@ -13,7 +13,6 @@ jobs:
         with:
           commands: deploy
           permission: admin
-          issue-type: pull-request 
-          named-args: true
+          issue-type: pull-request
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           reaction-token: $(( secrets.REPO_ACCESS_TOKEN ))
