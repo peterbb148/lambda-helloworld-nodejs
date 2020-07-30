@@ -13,6 +13,5 @@ jobs:
           commands: production
           permission: admin
           issue-type: pull-request
-          named-args: true
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           reaction-token: $(( secrets.REPO_ACCESS_TOKEN ))
