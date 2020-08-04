@@ -21,4 +21,4 @@ jobs:
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_region: eu-west-1
         function_name: prd-HelloWorld
-        zip_file: ${{steps.download.outputs.download-path}}/bundle.zip
+        zip_file: bundle.zip
