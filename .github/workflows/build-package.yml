@@ -36,8 +36,8 @@ jobs:
         node-version: [12.x]
     runs-on: ubuntu-latest
     steps:
-      - name: upload package
       - uses: actions/upload-artifact@v2
+      - name: upload package
         with:
           name: bundle
           path: ./bundle.zip
