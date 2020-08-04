@@ -29,8 +29,3 @@ jobs:
         uses: montudor/action-zip@v0.1.0
         with:
           args: zip -qq -r ./bundle.zip ./
-      - name: upload package
-      - uses: actions/upload-artifact@v2
-        with:
-          name: bundle
-          path: ./bundle.zip
