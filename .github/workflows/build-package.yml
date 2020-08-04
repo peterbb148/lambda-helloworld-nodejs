@@ -1,4 +1,4 @@
-name: build package
+name: Build package
 on:
   workflow_dispatch:
 jobs:
