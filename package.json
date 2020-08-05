@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/peterbb148/lambda-helloworld/issues"
   },
-  "homepage": "https://github.com/peterbb148/lambda-helloworld#readme"
+  "homepage": "https://github.com/peterbb148/lambda-helloworld#readme",
+  "dependencies": {}
 }
