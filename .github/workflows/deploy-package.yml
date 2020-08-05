@@ -15,7 +15,6 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: bundle
-        path: ~/download
       
     - name: Display structure of downloaded files
       run: ls -R   
@@ -27,4 +26,4 @@ jobs:
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_region: eu-west-1
         function_name: prd-HelloWorld
-        zip_file: ./download/bundle.zip
+        zip_file: ./bundle.zip
